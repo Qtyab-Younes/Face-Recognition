@@ -40,6 +40,6 @@ app.post('/profile/:id', (req, res)=> {profile.handleProfileGet(req, res, db)})
 
 app.put('/image', (req,res)=> {image.handleImageCount(req, res, db)})
 
-app.listen(3000, ()=> {
-    console.log('hey im running in 3000');
+app.listen(process.env.PORT || 3000, ()=> {
+    console.log(`hey im running in ${process.env.PORT}`);
 })
